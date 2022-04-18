@@ -1,0 +1,12 @@
+doctype html
+html
+   include layout.pug
+   head
+      title=name
+   body
+      h1=name
+      p=description
+      a(href='/add_ingredient') Add new ingredient
+      ul
+        each ingredient in ingredients_list
+            li= ingredient.name

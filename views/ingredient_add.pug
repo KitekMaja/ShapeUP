@@ -1,0 +1,22 @@
+doctype html
+html
+   include layout.pug
+   head
+      title=name
+   body
+      h1=name
+      a(href='/list_ingredients') Return to ingredients
+      form(role='form' action='/api/ingredients' method='POST')
+         label Naziv: 
+         br
+         input(type='text' name='name' value='')
+         br
+         label Število kalorij: 
+         br 
+         input(type='number' step='0.01' name='calories' value='')
+         br
+         label Teža (v gramih): 
+         br
+         input(type='number' name='quantityGrams' value=100)
+         br
+         button(type='submit') Submit
